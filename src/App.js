@@ -3,7 +3,6 @@ import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Header from "./features/header/Header";
 import PrimaryNavBar from "./features/primaryNavBar/PrimaryNavBar";
-import SecondaryNavBar from "./features/secondaryNavBar/SecondaryNavBar";
 
 const theme = createMuiTheme({
   palette: {
@@ -27,7 +26,6 @@ export const Home = ({ beers, loadingState }) => (
       <CssBaseline />
       <Header title="Demo App" />
       <PrimaryNavBar />
-      <SecondaryNavBar />
     </MuiThemeProvider>
   </Fragment>
 );

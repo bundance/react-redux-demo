@@ -32,27 +32,8 @@ TabPanel.propTypes = {
   value: PropTypes.any.isRequired,
 };
 
-function a11yProps(index) {
-  return {
-    id: `scrollable-prevent-tab-${index}`,
-    "aria-controls": `scrollable-prevent-tabpanel-${index}`,
-  };
-}
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    backgroundColor: theme.palette.common.black,
-    color: theme.palette.common.white,
-    "&$selected": {
-      backgroundColor: theme.palette.common.black,
-    },
-  },
-  selected: {},
-}));
-
-export default function SecondaryNavBar() {
+export default function SecondaryNavBar({ children }) {
   const [value, setValue] = React.useState(0);
-  const classes = useStyles();
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -67,24 +48,7 @@ export default function SecondaryNavBar() {
         scrollButtons="off"
         aria-label="Secondary Navigation Bar"
       >
-        <Tab
-          classes={{ ...classes }}
-          label="All"
-          aria-label="all"
-          {...a11yProps(0)}
-        />
-        <Tab
-          classes={{ ...classes }}
-          label="pizza"
-          aria-label="pizza"
-          {...a11yProps(1)}
-        />
-        <Tab
-          classes={{ ...classes }}
-          label="steak"
-          aria-label="steak"
-          {...a11yProps(2)}
-        />
+        {children}
       </Tabs>
 
       <TabPanel value={value} index={0}>
