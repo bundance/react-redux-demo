@@ -1,8 +1,18 @@
-import React, { Fragment } from "react";
-import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import React from "react";
+import {
+  MuiThemeProvider,
+  createMuiTheme,
+  makeStyles,
+} from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Header from "./features/header/Header";
-import PrimaryNavBar from "./features/primaryNavBar/PrimaryNavBar";
+import PrimaryNavBar from "./features/navBars/PrimaryNavBar";
+import Typography from "@material-ui/core/Typography";
+import Grid from "@material-ui/core/Grid";
+import LocalCafe from "@material-ui/icons/LocalCafe";
+import KnifeFork from "@material-ui/icons/Restaurant";
+import Settings from "@material-ui/icons/Settings";
+import Search from "@material-ui/icons/Search";
 
 const theme = createMuiTheme({
   palette: {
@@ -20,14 +30,70 @@ const theme = createMuiTheme({
   },
 });
 
-export const Home = ({ beers, loadingState }) => (
-  <Fragment>
+const useStyles = makeStyles((theme) => ({
+  root: {
+    minHeight: "100%",
+    display: "flex",
+    flexDirection: "column",
+  },
+}));
+
+const primaryTabIcons = [
+  <LocalCafe />,
+  <KnifeFork />,
+  <Settings />,
+  <Search />,
+];
+
+const secondaryTabBarData = [
+  {
+    tabs: ["Pizza", "Steak", "All Food"],
+    tabPanels: {
+      "0": () => <Typography>Item 0 0</Typography>,
+      "1": () => <Typography>Item 0 1</Typography>,
+      "2": () => <Typography>Item 0 2</Typography>,
+    },
+  },
+  {
+    tabs: ["All Foods", "tmp"],
+    tabPanels: {
+      "0": () => <Typography>All Foods 0 0</Typography>,
+      "1": () => <Typography>All Foods 0 1</Typography>,
+    },
+  },
+  {
+    tabs: ["Settings", "tmp"],
+    tabPanels: {
+      "0": () => <Typography>Settings 0 0</Typography>,
+      "1": () => <Typography>Settings 0 1</Typography>,
+    },
+  },
+  {
+    tabs: ["Search", "tmp"],
+    tabPanels: {
+      "0": () => <Typography>Search 0 0</Typography>,
+      "1": () => <Typography>Search 0 1</Typography>,
+    },
+  },
+];
+
+export const Home = ({ beers, loadingState }) => {
+  const classes = useStyles();
+  return (
     <MuiThemeProvider theme={theme}>
       <CssBaseline />
-      <Header title="Demo App" />
-      <PrimaryNavBar />
+      <div className={classes.root}>
+        <Grid container spacing={3} direction="column">
+          <Grid item xs={12}>
+            <Header title="Demo App" />
+            <PrimaryNavBar
+              primaryTabIcons={primaryTabIcons}
+              secondaryTabBars={secondaryTabBarData}
+            />
+          </Grid>
+        </Grid>
+      </div>
     </MuiThemeProvider>
-  </Fragment>
-);
-
+  );
+};
 export default Home;
