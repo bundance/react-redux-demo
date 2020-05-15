@@ -1,0 +1,1 @@
+export const ROOT_ENDPOINT = 'https://api.punkapi.com/v2/';
