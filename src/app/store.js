@@ -3,6 +3,6 @@ import beerReducer from "../features/beer/beerSlice";
 
 export default configureStore({
   reducer: {
-    beer: beerReducer,
+    beers: beerReducer,
   },
 });

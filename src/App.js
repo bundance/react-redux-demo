@@ -49,11 +49,11 @@ const primaryTabIcons = [
 
 const secondaryTabBarData = [
   {
-    tabs: ["Pizza", "Steak", "All Food"],
+    tabs: ["All", "Pizza", "Steak"],
     tabPanels: {
-      "0": () => <BeerList foodType="pizza" />,
-      "1": () => <Typography>Item 0 1</Typography>,
-      "2": () => <Typography>Item 0 2</Typography>,
+      "0": () => <BeerList />,
+      "1": () => <BeerList foodType="pizza" />,
+      "2": () => <BeerList foodType="steak" />,
     },
   },
   {
