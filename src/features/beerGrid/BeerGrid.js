@@ -24,6 +24,9 @@ const useStyles = makeStyles((theme) => ({
   cardName: {
     lineHeight: 1.3,
   },
+  spaceBelow: {
+    marginTop: 10,
+  },
 }));
 
 const mapDispatchToProps = { fetchBeer };
@@ -32,23 +35,35 @@ const mapStateToProps = (state) => ({
 });
 
 function BeerDialog({ beer, onClose, open }) {
+  const classes = useStyles();
   return beer ? (
     <Dialog onClose={onClose} open={open}>
       <DialogTitle>{beer.name}</DialogTitle>
       <DialogContent>
         <ImageCard title={beer.name} image={beer.image_url} />
-        <Typography>
-          <h4>{beer.tagline}</h4>
-          <h5>Description</h5>
-          <p>{beer.description}</p>
-          <p>ABV: {beer.abv}%</p>
-          <h5>Food Pairing</h5>
+
+        <Box>
+          <Typography variant={"h5"} className={classes.spaceBelow}>
+            {beer.tagline}
+          </Typography>
+          <Typography variant={"h6"} className={classes.spaceBelow}>
+            Description
+          </Typography>
+          <Typography className={classes.spaceBelow}>
+            {beer.description}
+          </Typography>
+          <Typography className={classes.spaceBelow}>
+            ABV: {beer.abv}%
+          </Typography>
+          <Typography variant={"h6"} className={classes.spaceBelow}>
+            Food Pairing
+          </Typography>
           <ul>
             {beer.food_pairing.map((food) => (
-              <li>{food}</li>
+              <li key={food}>{food}</li>
             ))}
           </ul>
-        </Typography>
+        </Box>
       </DialogContent>
     </Dialog>
   ) : null;
