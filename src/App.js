@@ -14,7 +14,7 @@ import KnifeFork from "@material-ui/icons/Restaurant";
 import Settings from "@material-ui/icons/Settings";
 import Search from "@material-ui/icons/Search";
 
-import BeerList from "./features/beer/BeerList";
+import BeerGrid from "./features/beer/BeerGrid";
 
 const theme = createMuiTheme({
   palette: {
@@ -51,9 +51,9 @@ const secondaryTabBarData = [
   {
     tabs: ["All", "Pizza", "Steak"],
     tabPanels: {
-      "0": () => <BeerList />,
-      "1": () => <BeerList foodType="pizza" />,
-      "2": () => <BeerList foodType="steak" />,
+      "0": () => <BeerGrid />,
+      "1": () => <BeerGrid foodType="pizza" />,
+      "2": () => <BeerGrid foodType="steak" />,
     },
   },
   {
