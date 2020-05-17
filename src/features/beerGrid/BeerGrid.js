@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
 
 const mapDispatchToProps = { fetchBeer };
 const mapStateToProps = (state) => ({
-  beerList: state.beers.beers,
+  beersList: state.beers.beersList,
 });
 
 function BeerDialog({ beer, onClose, open }) {
@@ -54,7 +54,7 @@ function BeerDialog({ beer, onClose, open }) {
   ) : null;
 }
 
-export function BeerGrid({ beerList, foodType }) {
+export function BeerGrid({ beersList, foodType }) {
   const [open, setOpen] = React.useState(false);
   const [selectedBeer, setSelectedBeer] = React.useState();
   const classes = useStyles();
@@ -72,7 +72,7 @@ export function BeerGrid({ beerList, foodType }) {
   return (
     <>
       <CardGrid
-        cards={beerList}
+        cards={beersList}
         renderCard={(card) => (
           <Box onClick={() => handleClick(card)}>
             <Paper
