@@ -21,14 +21,16 @@ const beerDetails = createSlice({
   },
 });
 
+// Action creators
 export const { fetchBeerSuccess, fetchBeerFailed } = beerDetails.actions;
 
+// Default reducer
 export default beerDetails.reducer;
 
+// Thunks
 export const fetchBeer = (food) => async (dispatch, getState) => {
   try {
     const { beers } = getState();
-    console.log({ beers });
     if (!beers.beers[food]) {
       const newBeers = await fetchBeerAPI(food);
 
