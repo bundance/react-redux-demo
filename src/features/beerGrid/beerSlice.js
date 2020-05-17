@@ -30,11 +30,8 @@ export default beerDetails.reducer;
 // Thunks
 export const fetchBeer = (food) => async (dispatch, getState) => {
   try {
-    const { beers } = getState();
-    if (!beers.beersList[food]) {
-      const newBeers = await fetchBeerAPI(food);
-      dispatch(fetchBeerSuccess(newBeers));
-    }
+    const beers = await fetchBeerAPI(food);
+    dispatch(fetchBeerSuccess(beers));
   } catch (err) {
     dispatch(fetchBeerFailed(err.toString()));
   }

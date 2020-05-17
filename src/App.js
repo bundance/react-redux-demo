@@ -57,24 +57,21 @@ const secondaryTabBarData = [
     },
   },
   {
-    tabs: ["All Foods", "tmp"],
+    tabs: ["All Foods"],
     tabPanels: {
-      "0": () => <Typography>All Foods 0 0</Typography>,
-      "1": () => <Typography>All Foods 0 1</Typography>,
+      "0": () => <Typography>All Foods</Typography>,
     },
   },
   {
-    tabs: ["Settings", "tmp"],
+    tabs: ["Settings"],
     tabPanels: {
-      "0": () => <Typography>Settings 0 0</Typography>,
-      "1": () => <Typography>Settings 0 1</Typography>,
+      "0": () => <Typography>Setting</Typography>,
     },
   },
   {
-    tabs: ["Search", "tmp"],
+    tabs: ["Search"],
     tabPanels: {
-      "0": () => <Typography>Search 0 0</Typography>,
-      "1": () => <Typography>Search 0 1</Typography>,
+      "0": () => <Typography>Search</Typography>,
     },
   },
 ];
