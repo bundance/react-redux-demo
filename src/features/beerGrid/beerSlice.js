@@ -33,7 +33,6 @@ export const fetchBeer = (food) => async (dispatch, getState) => {
     const { beers } = getState();
     if (!beers.beers[food]) {
       const newBeers = await fetchBeerAPI(food);
-
       dispatch(fetchBeerSuccess(newBeers));
     }
   } catch (err) {

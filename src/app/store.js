@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import beerReducer from "../features/beer/beerSlice";
+import beerReducer from "../features/beerGrid/beerSlice";
 
 export default configureStore({
   reducer: {

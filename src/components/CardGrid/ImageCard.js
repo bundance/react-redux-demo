@@ -31,7 +31,12 @@ export function ImageCard({ image, title }) {
     <Card className={classes.root}>
       <CardActionArea className={muiCardActionAreaStyles.root}>
         {image ? (
-          <img className={classes.media} src={image} title={title} />
+          <img
+            className={classes.media}
+            src={image}
+            title={title}
+            alt={title}
+          />
         ) : (
           <Typography>No Image yet</Typography>
         )}

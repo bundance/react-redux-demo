@@ -68,7 +68,7 @@ export function BeerGrid({ beerList, foodType }) {
     setSelectedBeer(beer);
     setOpen(true);
   };
-  console.log({ selectedBeer });
+
   return (
     <>
       <CardGrid

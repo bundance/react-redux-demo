@@ -28,12 +28,11 @@ export function CardGrid({ cards, cardsPerRow = 3, renderCard }) {
   const classes = useGridStyles();
 
   const chunkedCards = chunk(cards, cardsPerRow);
-
-  return (
+  return cards ? (
     <div className={classes.panelContainer}>
       <Grid container className={classes.root}>
         <Grid item xs={12}>
-          <Grid container spacing={4}>
+          <Grid container spacing={Math.floor(cardsPerRow)}>
             {chunkedCards.map((cards, rowIndex) => (
               <Grid
                 container
@@ -56,5 +55,5 @@ export function CardGrid({ cards, cardsPerRow = 3, renderCard }) {
         </Grid>
       </Grid>
     </div>
-  );
+  ) : null;
 }

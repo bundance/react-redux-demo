@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardGrid render 4 cards per row 1`] = `
+<div>
+  <div
+    class="makeStyles-panelContainer-221"
+  >
+    <div
+      class="MuiGrid-root makeStyles-root-217 MuiGrid-container"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3"
+        >
+          <div
+            class="MuiGrid-root makeStyles-rowContainer-220 MuiGrid-container MuiGrid-spacing-xs-4"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+            />
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+            />
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+            />
+          </div>
+          <div
+            class="MuiGrid-root makeStyles-rowContainer-220 MuiGrid-container MuiGrid-spacing-xs-4"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+            />
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+            />
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+            />
+          </div>
+          <div
+            class="MuiGrid-root makeStyles-rowContainer-220 MuiGrid-container MuiGrid-spacing-xs-4"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+            />
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+            />
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`CardGrid renders 3 cards per row by default 1`] = `
+<div>
+  <div
+    class="makeStyles-panelContainer-113"
+  >
+    <div
+      class="MuiGrid-root makeStyles-root-109 MuiGrid-container"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3"
+        >
+          <div
+            class="MuiGrid-root makeStyles-rowContainer-112 MuiGrid-container MuiGrid-spacing-xs-4"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+            />
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+            />
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+            />
+          </div>
+          <div
+            class="MuiGrid-root makeStyles-rowContainer-112 MuiGrid-container MuiGrid-spacing-xs-4"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+            />
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+            />
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+            />
+          </div>
+          <div
+            class="MuiGrid-root makeStyles-rowContainer-112 MuiGrid-container MuiGrid-spacing-xs-4"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+            />
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+            />
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-4"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

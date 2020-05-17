@@ -14,7 +14,7 @@ import KnifeFork from "@material-ui/icons/Restaurant";
 import Settings from "@material-ui/icons/Settings";
 import Search from "@material-ui/icons/Search";
 
-import BeerGrid from "./features/beer/BeerGrid";
+import BeerGrid from "./features/beerGrid/BeerGrid";
 
 const theme = createMuiTheme({
   palette: {
@@ -79,7 +79,7 @@ const secondaryTabBarData = [
   },
 ];
 
-export const Home = ({ beers, loadingState }) => {
+export const Home = ({ loadingState }) => {
   const classes = useStyles();
   return (
     <MuiThemeProvider theme={theme}>
